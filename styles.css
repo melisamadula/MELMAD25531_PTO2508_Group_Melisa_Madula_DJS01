@@ -1,0 +1,67 @@
+/* ========================
+   Global & Root Variables
+======================== */
+* {
+  box-sizing: border-box; /* Ensures padding and border are included in total element size */
+}
+
+:root {
+  /* Color Variables */
+  --primary-color: black;
+  --secondary-color: gray; /* Used for backgrounds and secondary text */
+  --primary-text-color: black;
+  --primary-bg-color: white;
+  --secondary-bg-color: #f0f0f0d5; /* Light gray background for sections and cards */
+  --accent-color: #ff5722; /* Accent color for highlights and buttons */
+/* Options: gainsboro, light gray, gray, #333333, #666666, #f0f0f0d5, #00000080 */
+}
+
+/* ================
+   Base Elements
+================ */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex; /* Allow layout to span horizontally */
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--secondary-color);
+  font-size: 1rem; /* Base font size for rem scaling */
+}
+
+/* ========================
+   Layout & Structure
+======================== */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--primary-bg-color);
+  border-bottom: 1px solid var(--secondary-bg-color);
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: var(--primary-text-color);
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--primary-text-color);
+  margin: 0.5rem 0;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
