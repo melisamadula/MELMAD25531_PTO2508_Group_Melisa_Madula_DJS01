@@ -4,6 +4,7 @@
  * @returns {Object} An object containing the open and close functions for the modal.
  */
 import { GenreService } from "../utils/GenreService.js";
+import { seasons } from "../data.js";
 
 export const createModal = (() => {
     const modal = document.getElementById("modal");
@@ -19,6 +20,8 @@ export const createModal = (() => {
     };
 
     const openModal = (podcastData) => {
+        const matchedSeasonData = seasons.find((item) => item.id === podcastData.id);
+
         titleEl.textContent = podcastData.title;
         imageEl.src = podcastData.image;
         imageEl.alt = podcastData.title;
@@ -27,7 +30,18 @@ export const createModal = (() => {
             .map((genre) => `<span class="tag">${genre}</span>`)
             .join("");
         updatedEl.textContent = `Updated: ${new Date(podcastData.updated).toLocaleDateString()}`;
-        seasonListEl.innerHTML = `<li>${podcastData.seasons} seasons</li>`;
+
+        if (matchedSeasonData && matchedSeasonData.seasonDetails) {
+            seasonListEl.innerHTML = matchedSeasonData.seasonDetails
+                .map(
+                    (season) =>
+                        `<li><strong>${season.title}</strong> — ${season.episodes} episodes</li>`
+                )
+                .join("");
+        } else {
+            seasonListEl.innerHTML = `<li>${podcastData.seasons} seasons</li>`;
+        }
+
         modal.classList.remove("hidden");
     };
 
