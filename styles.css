@@ -139,3 +139,48 @@ h3 {
   display: none !important;
 }
 
+/* ========================
+   Responsive Design
+   ======================== */
+@media (max-width: 600px) {
+  .app-header {
+    flex-direction: row;
+    align-items: space-between;
+    padding: 1rem;
+  }
+
+  .search-icon {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  #podcastGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .header-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+  }
+
+  .search-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .profile-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
