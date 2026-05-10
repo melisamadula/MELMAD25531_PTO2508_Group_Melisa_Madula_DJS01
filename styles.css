@@ -223,7 +223,8 @@ h3 {
   font-size: 0.95rem;
   color: var(--primary-text-color);
 }
-.tags {
+.tags,
+.genre-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;

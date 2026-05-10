@@ -20,7 +20,11 @@ export const createPodcastCard = (podcastData, openModal) => {
     <div class="podcast-card-content">
       <h3>${podcastData.title}</h3>
       <p><img src="calendar.png" alt="Calendar" class="season-icon" /> ${podcastData.seasons} seasons</p>
-      <p>${GenreService.getNames(podcastData.genres).join(", ")}</p>
+      <div class="genre-tags">
+        ${GenreService.getNames(podcastData.genres)
+          .map((genre) => `<span class="tag">${genre}</span>`)
+          .join("")}
+      </div>
       <p>Updated: ${new Date(podcastData.updated).toLocaleDateString()}</p>
     </div>
   `;
