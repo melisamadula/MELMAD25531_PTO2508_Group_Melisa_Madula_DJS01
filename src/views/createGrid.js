@@ -14,7 +14,7 @@ export const createGrid = () => {
          * Renders a list of podcast cards into the grid.
          * @param {Object[]} podcastList - Array of podcast objects.
          */
-        renderPodcastList: (podcastList) => {
+        render: (podcastList) => {
             container.innerHTML = "";
             podcastList.forEach((p) => {
                 const card = createPodcastCard(p, createModal.open);
