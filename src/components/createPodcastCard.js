@@ -1,3 +1,5 @@
+import { GenreService } from "../utils/GenreService.js";
+
 /**
  * Creates a podcast card element based on the provided podcast data.
  *
@@ -17,7 +19,9 @@ export const createPodcastCard = (podcastData, openModal) => {
     <img src="${podcastData.image}" alt="${podcastData.title}" class="podcast-card-image" />
     <div class="podcast-card-content">
       <h3>${podcastData.title}</h3>
-      <p>${podcastData.seasons} seasons</p>
+      <p><img src="calendar.png" alt="Calendar" class="season-icon" /> ${podcastData.seasons} seasons</p>
+      <p>${GenreService.getNames(podcastData.genres).join(", ")}</p>
+      <p>Updated: ${new Date(podcastData.updated).toLocaleDateString()}</p>
     </div>
   `;
   card.addEventListener("click", () => openModal(podcastData));

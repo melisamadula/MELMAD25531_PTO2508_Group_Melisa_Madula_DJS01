@@ -135,6 +135,12 @@ h3 {
   font-size: 0.95rem;
 }
 
+.season-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+}
+
 .hidden {
   display: none !important;
 }
