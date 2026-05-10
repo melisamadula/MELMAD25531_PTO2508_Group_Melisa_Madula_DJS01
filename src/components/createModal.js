@@ -35,11 +35,21 @@ export const createModal = (() => {
             seasonListEl.innerHTML = matchedSeasonData.seasonDetails
                 .map(
                     (season) =>
-                        `<li><strong>${season.title}</strong> — ${season.episodes} episodes</li>`
+                        `<li class="season-card">
+                            <div class="season-info">
+                                <h3>${season.title}</h3>
+                                <p>${season.episodes} episodes</p>
+                            </div>
+                            <span class="episode-count">${season.episodes}</span>
+                        </li>`
                 )
                 .join("");
         } else {
-            seasonListEl.innerHTML = `<li>${podcastData.seasons} seasons</li>`;
+            seasonListEl.innerHTML = `<li class="season-card">
+                                        <div class="season-info">
+                                          <h3>${podcastData.seasons} seasons</h3>
+                                        </div>
+                                      </li>`;
         }
 
         modal.classList.remove("hidden");

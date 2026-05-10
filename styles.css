@@ -249,6 +249,56 @@ h3 {
   color: var(--secondary-color);
 }
 
+/*additional styles for the modal content and responsive adjustments are included below.*/
+body {
+  font-family: 'Inter', sans-serif; /* Modern sans-serif font */
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.seasons-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.season-card {
+  display: flex;
+  justify-content: space-between; /* Pushes text left and count right */
+  align-items: center;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px; /* Smooth rounded corners */
+  padding: 20px 30px;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Optional: Slight hover effect to match modern UI patterns */
+.season-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.season-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+}
+
+.season-info p {
+  margin: 5px 0 0 0;
+  font-size: 0.9rem;
+  color: #666; /* Lighter grey for the sub-description */
+}
+
+.episode-count {
+  font-size: 0.9rem;
+  color: #444;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+
+
+
 
 /* ========================
    Responsive Design
