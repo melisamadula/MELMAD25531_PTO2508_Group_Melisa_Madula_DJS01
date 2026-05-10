@@ -22,7 +22,7 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   display: flex; /* Allow layout to span horizontally */
-  flex-direction: row;
+  flex-direction: column; /* Stack header and main content vertically */
   width: 100%;
   min-height: 100vh;
   margin: 0;
