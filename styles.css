@@ -140,9 +140,100 @@ h3 {
 }
 
 /* ========================
+   Modal Styles
+======================== */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: var(--primary-bg-color);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 70%;
+  height: 85%;
+  max-width: 1440px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+.modal-content h2 {
+  margin-top: 0;
+  color: var(--primary-text-color);
+}
+.modal-content p {
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--primary-text-color);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.banner {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.modal-img {
+  width: 30%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.info-section h3 {
+  margin: 0.75rem 0 0.35rem;
+  font-size: 0.95rem;
+  color: var(--primary-text-color);
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--secondary-bg-color);
+  color: var(--primary-text-color);
+  font-size: 0.85rem;
+}
+.season-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--secondary-color);
+}
+.modal-updated-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+
+/* ========================
    Responsive Design
    ======================== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .app-header {
     flex-direction: row;
     align-items: space-between;
@@ -182,5 +273,22 @@ h3 {
   .profile-icon {
     width: 30px;
     height: 30px;
+  }
+
+  /* Modal adjustments for smaller screens */
+  .modal-content {
+    width: 85%;
+    height: 90%;
+    max-width: none;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-img {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
